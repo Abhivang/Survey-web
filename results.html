@@ -1,0 +1,18 @@
+<h1>Survey Results</h1>
+<table border="1">
+    <tr>
+        <th>Claim</th>
+        <th>Opinion</th>
+        <th>Percentage</th>
+    </tr>
+    {% for claim, opinions in percentages.items() %}
+        {% for opinion, percent in opinions.items() %}
+            <tr>
+                <td>{{ claim }}</td>
+                <td>{{ opinion }}</td>
+                <td>{{ percent | round(2) }}%</td>
+            </tr>
+        {% endfor %}
+    {% endfor %}
+</table>
+<a href="{{ url_for('logout') }}">Logout</a>
