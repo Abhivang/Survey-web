@@ -4,7 +4,7 @@ trigger:
       - main  # Triggers pipeline on code push to the main branch
 
 pool:
-  vmImage: 'windows-latest'  # Use a Microsoft-hosted agent
+  name: Abhi  # Use a self-hosted agent pool (update this name accordingly)
 
 steps:
   - task: UseDotNet@2
